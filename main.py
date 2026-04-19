@@ -26,3 +26,20 @@ for s in dat.get_salles():
     s.afficher_infos()
 
 dat.delete_salle("S5")
+
+from services.service_salle import ServiceSalle
+from models.salle import Salle
+service = ServiceSalle()
+
+print("LISTE INITIALE")
+service.recuperer_salles()
+
+print("AJOUT")
+print(service.ajouter_salle(Salle("S10", "Salle1", "Lab", 30)))
+
+print("MODIFICATION")
+print(service.modifier_salle(Salle("S10", "Salle1 mod", "Lab", 40)))
+print("SUPPRESSION")
+print(service.supprimer_salle("S10"))
+print("RECHERCHE")
+print(service.rechercher_salle("S10"))
