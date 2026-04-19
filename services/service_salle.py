@@ -17,3 +17,12 @@ class ServiceSalle:
                 self.dao.insert_salle(s)
                 print("Salle ajoutée")
                 return True
+
+    def modifier_salle(self, s):
+        if int(s.capacite) < 1:
+            print("Capacité invalide")
+            return False
+        else:
+            self.dao.update_salle(s)
+            print("Salle modifiée")
+            return True
