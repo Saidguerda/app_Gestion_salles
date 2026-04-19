@@ -20,7 +20,9 @@ dat.insert_salle(s3)
 s1_modif = Salle("S5", "Salle Informatique", "Lab", 35)
 dat.update_salle(s1_modif)
 
-dat.get_salle("S1").afficher_infos()
+dat.get_salle("S5").afficher_infos()
 
 for s in dat.get_salles():
     s.afficher_infos()
+
+dat.delete_salle("S5")
