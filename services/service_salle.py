@@ -35,3 +35,17 @@ class ServiceSalle:
             self.dao.delete_salle(code)
             print("Salle supprimée")
             return True
+
+    def rechercher_salle(self, code):
+        if code == "":
+            print("Code vide")
+            return False
+        else:
+            s = self.dao.get_salle(code)
+            if s:
+                print("Salle trouvée")
+                s.afficher_infos()
+                return True
+            else:
+                print("Salle non trouvée")
+                return False
