@@ -24,6 +24,14 @@ class DataSalle:
         conn.commit()
         conn.close()
 
+    def update_salle(self, salle):
+        conn = self.get_connection()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE salle SET libelle=%s, type=%s, capacite=%s WHERE code=%s",
+                       (salle.libelle, salle.type, salle.capacite, salle.code))
+        conn.commit()
+        conn.close()
+
 
 
 
