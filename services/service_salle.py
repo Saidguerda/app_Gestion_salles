@@ -49,3 +49,13 @@ class ServiceSalle:
             else:
                 print("Salle non trouvée")
                 return False
+
+    def recuperer_salles(self):
+        liste = self.dao.get_salles()
+        if liste:
+            for s in liste:
+                s.afficher_infos()
+            return True
+        else:
+            print("Aucune salle")
+            return False
