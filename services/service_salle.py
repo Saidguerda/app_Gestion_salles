@@ -26,3 +26,12 @@ class ServiceSalle:
             self.dao.update_salle(s)
             print("Salle modifiée")
             return True
+
+    def supprimer_salle(self, code):
+        if code == "":
+            print("Code vide")
+            return False
+        else:
+            self.dao.delete_salle(code)
+            print("Salle supprimée")
+            return True
