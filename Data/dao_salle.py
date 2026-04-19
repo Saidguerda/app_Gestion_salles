@@ -39,6 +39,13 @@ class DataSalle:
         conn.commit()
         conn.close()
 
+    def get_salle(self, code):
+        conn = self.get_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM salle WHERE code=%s", (code,))
+        r = cursor.fetchone()
+        conn.close()
+
 
 
 
