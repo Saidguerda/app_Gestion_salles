@@ -20,7 +20,7 @@ dat.insert_salle(s3)
 s1_modif = Salle("S5", "Salle Informatique", "Lab", 35)
 dat.update_salle(s1_modif)
 
-dat.get_salle("S5").afficher_infos()
+dat.get_salle("S5")
 
 for s in dat.get_salles():
     s.afficher_infos()
@@ -43,3 +43,8 @@ print("SUPPRESSION")
 print(service.supprimer_salle("S10"))
 print("RECHERCHE")
 print(service.rechercher_salle("S10"))
+
+from views.view_salle import ViewSalle
+
+app = ViewSalle()
+app.mainloop()
