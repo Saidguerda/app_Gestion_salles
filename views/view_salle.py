@@ -29,5 +29,8 @@ class ViewSalle(ctk.CTk):
         self.capacite = ctk.CTkEntry(self.cadreInfo)
         self.capacite.grid(row=3, column=1)
 
+        self.cadreActions = ctk.CTkFrame(self)
+        self.cadreActions.pack(pady=10)
+
 
 
