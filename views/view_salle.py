@@ -13,3 +13,21 @@ class ViewSalle(ctk.CTk):
         self.cadreInfo = ctk.CTkFrame(self)
         self.cadreInfo.pack(pady=10)
 
+        ctk.CTkLabel(self.cadreInfo, text="Code").grid(row=0, column=0)
+        self.code = ctk.CTkEntry(self.cadreInfo)
+        self.code.grid(row=0, column=1)
+
+        ctk.CTkLabel(self.cadreInfo, text="Libellé").grid(row=1, column=0)
+        self.libelle = ctk.CTkEntry(self.cadreInfo)
+        self.libelle.grid(row=1, column=1)
+
+        ctk.CTkLabel(self.cadreInfo, text="Type").grid(row=2, column=0)
+        self.type = ctk.CTkEntry(self.cadreInfo)
+        self.type.grid(row=2, column=1)
+
+        ctk.CTkLabel(self.cadreInfo, text="Capacité").grid(row=3, column=0)
+        self.capacite = ctk.CTkEntry(self.cadreInfo)
+        self.capacite.grid(row=3, column=1)
+
+
+
