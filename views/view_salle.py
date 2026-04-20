@@ -10,3 +10,6 @@ class ViewSalle(ctk.CTk):
         self.title("Gestion des salles")
         self.geometry("600x500")
 
+        self.cadreInfo = ctk.CTkFrame(self)
+        self.cadreInfo.pack(pady=10)
+
